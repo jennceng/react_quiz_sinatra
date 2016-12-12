@@ -1,8 +1,12 @@
 # react_quiz
 
-To run the app with rerun do this:
+To run the app:
 
 ```
-1. gem install rerun
-2. rerun 'ruby server.rb'
+1. npm install
+2. ruby server.rb
+```
+Open another tab
+```
+3. npm start
 ```
