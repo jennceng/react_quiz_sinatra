@@ -20,7 +20,7 @@ describe('Question Index', () => {
       let question = wrapper.find('#question')
       // why does the following not work?
       // expect(question.text()).toEqual('What is the best Javascript Framework?');
-      // expect(wrapper.text()).toMatch('What is the best Javascript Framework?');
+      // expect(pageText).toMatch('What is the best Javascript Framework?');
       expect(pageText).toMatch(data.question.body);
       expect(pageText).toMatch('React');
       expect(pageText).toMatch('Ember');
@@ -35,7 +35,6 @@ describe('Question Index', () => {
   describe('select an incorrect response', () => {
     it('shows a response of WRONG for selecting rails', done => {
       setTimeout(() => {
-        console.log(wrapper.text())
         let wrongAnswer = wrapper.findWhere(n => {
           return n.type() === 'p' && n.text() === 'Rails';
         });
@@ -50,7 +49,6 @@ describe('Question Index', () => {
 
     it('shows a response of WRONG for selecting Ember', done => {
       setTimeout(() => {
-        console.log(wrapper.text())
         let wrongAnswer = wrapper.findWhere(n => {
           return n.type() === 'p' && n.text() === 'Ember';
         });
@@ -65,7 +63,6 @@ describe('Question Index', () => {
 
     it('shows a response of WRONG', done => {
       setTimeout(() => {
-        console.log(wrapper.text())
         let wrongAnswer = wrapper.findWhere(n => {
           return n.type() === 'p' && n.text() === 'Angular 2';
         });
@@ -83,7 +80,6 @@ describe('Question Index', () => {
   describe('toggle between wrong and right answers', () => {
     it('shows a response of WRONG for selecting rails', done => {
       setTimeout(() => {
-        console.log(wrapper.text())
         let wrongAnswer = wrapper.findWhere(n => {
           return n.type() === 'p' && n.text() === 'Rails';
         });
@@ -95,7 +91,6 @@ describe('Question Index', () => {
         done();
       }, 0);
       setTimeout(() => {
-        console.log(wrapper.text())
         let wrongAnswer = wrapper.findWhere(n => {
           return n.type() === 'p' && n.text() === 'React';
         });
@@ -107,7 +102,6 @@ describe('Question Index', () => {
         done();
       }, 0);
       setTimeout(() => {
-        console.log(wrapper.text())
         let wrongAnswer = wrapper.findWhere(n => {
           return n.type() === 'p' && n.text() === 'Rails';
         });
@@ -126,7 +120,6 @@ describe('Question Index', () => {
   describe('select a correct response of React', () => {
     it('shows a response of CRUSHED IT', done => {
       setTimeout(() => {
-        console.log(wrapper.text())
         let wrongAnswer = wrapper.findWhere(n => {
           return n.type() === 'p' && n.text() === 'React';
         });
